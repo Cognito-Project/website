@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next export",
+    "export": "npm run build && next export",
     "start": "next start"
+    
   },
   "dependencies": {
     "@rebass/preset": "^4.0.5",
