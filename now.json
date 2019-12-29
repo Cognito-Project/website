@@ -1,0 +1,12 @@
+{
+  "name": "website",
+  "version": 2,
+  "alias": ["beyondTheFive", "bt5", "beyond"],
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/register", "dest": "/register.html" }
+  ],
+  "github": {
+    "silent": true
+  }
+}
