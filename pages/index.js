@@ -27,7 +27,7 @@ const info = [
 const courses = ["Intro to Cybersecurity", "Java", "Python", "Golang"];
 
 const Home = () => (
-  <Layout>
+  <Layout landing>
     <Text fontSize={[3, 4, 5]} textAlign="center" my={5}>
       The Cognito Project is a online platform that teaches students security &
       programming through project based learning.
@@ -54,9 +54,7 @@ const Home = () => (
       ))}
     </Flex>
     <Flex m={5} p={5} justifyContent="center" alignContent="center">
-      <Box>
-        <Button bg="tomato"> <Text color="snow" fontSize={[3, 4, 5]}>Register for the beta</Text></Button>
-      </Box>
+      <RegisterButton />
     </Flex>
   </Layout>
 );

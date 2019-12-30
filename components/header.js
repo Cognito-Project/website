@@ -1,8 +1,8 @@
 import { Box, Text, Flex, Image, Heading, Button } from "rebass";
+import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
-
   { href: "/about", label: "About" },
   { href: "/login", label: "Login" }
 ];
@@ -16,11 +16,11 @@ const VertAlign = ({ children }) => (
 const NavList = props => {
   const links = props.links;
   const linkList = links.map(link => (
-    <Button href={link.href} m={1} bg="transparent">
-      <Text color="#c9c7ff" mx="small">
+    <Link href={link.href}>
+      <Button m={1} bg="transparent" color="#c9c7ff">
         {link.label}
-      </Text>
-    </Button>
+      </Button>
+    </Link>
   ));
   return (
     <Box direction="row-responsive" wrap="true" pad="small">
@@ -46,6 +46,7 @@ const header = () => (
     <Box width={[1, 1 / 2]} my="auto">
       <Flex justifyContent="flex-end" verticalAlign="bottom">
         <NavList links={links} />
+        
       </Flex>
     </Box>
   </Flex>

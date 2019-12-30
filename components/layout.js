@@ -8,9 +8,11 @@ import theme from "@rebass/preset";
 import Landing from "./landing";
 import Footer from "./footer";
 import Header from "./header";
+import Waves from "./waves";
 import ThemeSwitch from "react-theme-switch";
+import netlifyIdentity from "netlify-identity-widget";
 
-const Home = ({ children }) => (
+const Home = ({ children, landing = false, login = false }) => (
   <React.Fragment>
     <NextSeo
       title="The Cognito Project"
@@ -23,15 +25,14 @@ const Home = ({ children }) => (
       </Head>
 
       <Box bg="#212121" color="white">
-       
         <Flex
           sx={{
             flexDirection: "column",
             minHeight: "100vh"
           }}
         >
-         
-          <Box bg="#710b04"
+          <Box
+            bg="#710b04"
             /*sx={{
               position: "-webkit-sticky",
               position: "sticky",
@@ -41,7 +42,9 @@ const Home = ({ children }) => (
           >
             <Header />
           </Box>
-          <Landing />
+
+          {landing ? <Landing /> : null}
+          {login ? <Waves top /> : null}
           <Flex
             sx={{
               flex: 1,
@@ -55,8 +58,8 @@ const Home = ({ children }) => (
               }}
             >
               <Box
-              bg="#212121"
-              color="white"
+                bg="#212121"
+                color="white"
                 width={[1, 3 / 4]}
                 sx={{
                   mx: "auto"
