@@ -11,9 +11,12 @@ class App extends React.Component {
     return (
       <Layout login>
         <Flex m={5} justifyContent="center" alignItems="center">
-          <Button bg="#c9c7ff" color="black" onClick={() => netlifyIdentity.open()}>
-              <Text  fontSize={[3, 4, 5]}> Click here to login!</Text>
-              
+          <Button
+            bg="#c9c7ff"
+            color="black"
+            onClick={() => netlifyIdentity.open()}
+          >
+            <Text fontSize={[3, 4, 5]}> Click here to login!</Text>
           </Button>
         </Flex>
       </Layout>

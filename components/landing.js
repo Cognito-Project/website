@@ -6,11 +6,6 @@ import styled from "styled-components";
 import Waves from "./waves";
 import RegisterButton from "./registerButton";
 
-const TitleFont = styled.div`
-  font-size: 2.3em;
-`;
-const verbs = ["Learn", "Create", "Innovate"];
-
 const Nav = () => (
   <Box>
     <Box
@@ -18,7 +13,7 @@ const Nav = () => (
       height={[200, 300]}
       bg="#710b04"
       verticalAlign="center"
-      p={[3,5]}
+      p={[3, 5]}
       my={-1}
     >
       <Flex
@@ -30,20 +25,6 @@ const Nav = () => (
           Your journey into security and programming starts here.
         </Heading>
 
-        {/* <Box flexDirection="row" alignSelf="center" justifyContent="center">
-            <Flex>
-              <Typing loop>
-                {verbs.map(verb => (
-                  <>
-                    <span style={{ fontSize: "2.3em" }}>{verb}</span>
-                    <Typing.Delay ms={1300} />
-                    <Typing.Backspace count={verb.length + 1} />
-                  </>
-                ))}
-              </Typing>
-              <TitleFont>with us.</TitleFont>
-                </Flex>
-          </Box>*/}
         <Box
           mt={4}
           flexDirection="row"
@@ -54,7 +35,7 @@ const Nav = () => (
         </Box>
       </Flex>
     </Box>
-    <Waves top={true} />
+    <Waves top />
   </Box>
 );
 

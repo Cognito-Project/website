@@ -3,14 +3,13 @@ import { Box, Flex, Text, Heading, Card, Button } from "rebass";
 import Layout from "../components/layout";
 import Link from "next/link";
 import ContentCard from "../components/ContentCard";
-import Tilt from "react-parallax-tilt";
 import RegisterButton from "../components/registerButton";
 
 const info = [
   {
     Title: "Learn",
     Body:
-      "Learn from a curriculum that is curated from the best books, online tutorials, and courses."
+      "Learn from a curriculum that is curated from the best books, online tutorials, and courses. Taught by students, for students."
   },
   {
     Title: "Create",
@@ -54,6 +53,7 @@ const Home = () => (
       ))}
     </Flex>
     <Flex m={5} p={5} justifyContent="center" alignContent="center">
+   
       <RegisterButton />
     </Flex>
   </Layout>
