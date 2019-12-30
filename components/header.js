@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/#about", label: "About" },
+  { href: "/#courses", label: "Courses" },
   { href: "/login", label: "Login" }
 ];
 
@@ -38,7 +39,7 @@ const header = () => (
           sx={{ width: ["25%", "10%"], height: ["25%", "10%"] }}
         />
         <Link href="/">
-          <Heading my="auto" fontSize={[4, 5]}>
+          <Heading ml={2} my="auto" fontSize={[4, 5]}>
             The Cognito Project
           </Heading>
         </Link>
