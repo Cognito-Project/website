@@ -1,3 +1,3 @@
 const withImages = require("next-images");
 const withCSS = require("@zeit/next-css");
-module.exports = withCSS(withImages({}));
+module.exports = withCSS(withImages({ distDir: "out/_next" }));
