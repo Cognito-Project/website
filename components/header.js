@@ -33,20 +33,21 @@ const header = () => (
   <Flex p={1}>
     <Box width={[1, 1 / 2]}>
       <Flex alignContent="center">
-        <Image
-          src={require("../public/logoNoText.png")}
-          sx={{ width: ["45%", "10%"], height: ["45%", "10%"] }}
-        />
+        <Link href="/">
+          <Image
+            src={require("../public/logoNoText.png")}
+            sx={{ width: ["45%", "10%"], height: ["45%", "10%"] }}
+          />
 
-        <Heading my="auto" fontSize={[3, 4, 5]}>
-          The Cognito Project
-        </Heading>
+          <Heading my="auto" fontSize={[3, 4, 5]}>
+            The Cognito Project
+          </Heading>
+        </Link>
       </Flex>
     </Box>
     <Box width={[1, 1 / 2]} my="auto">
       <Flex justifyContent="flex-end" verticalAlign="bottom">
         <NavList links={links} />
-        
       </Flex>
     </Box>
   </Flex>
