@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Link from "next/link";
 import ContentCard from "../components/ContentCard";
 import RegisterButton from "../components/registerButton";
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 const info = [
   {
@@ -27,18 +28,20 @@ const courses = ["Intro to Cybersecurity", "Java", "Python", "Golang"];
 
 const Home = () => (
   <Layout landing>
+    <ScrollableAnchor id={'about'}>
     <Text fontSize={[3, 4, 5]} textAlign="center" my={5}>
       The Cognito Project is a online platform that teaches students security &
       programming through project based learning.
-    </Text>
+    </Text></ScrollableAnchor>
     <Flex justifyContent="center" flexWrap="wrap">
       {info.map(i => (
         <ContentCard title={i.Title}>{i.Body}</ContentCard>
       ))}
-    </Flex>
+    </Flex><ScrollableAnchor id={'courses'}>
     <Heading fontSize={[3, 4, 5]} textAlign="center" marginTop={5}>
       We currently offer courses in:
     </Heading>
+    </ScrollableAnchor>
     <Flex justifyContent="center" flexWrap="wrap">
       {courses.map(course => (
         <Card
