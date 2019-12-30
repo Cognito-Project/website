@@ -30,22 +30,26 @@ const NavList = props => {
 };
 
 const header = () => (
-  <Flex p={1}>
+  <Flex p={1} flexDirection={["column", "row"]}>
     <Box width={[1, 1 / 2]}>
       <Flex alignContent="center">
         <Image
           src={require("../public/logoNoText.png")}
-          sx={{ width: ["45%", "10%"], height: ["45%", "10%"] }}
+          sx={{ width: ["25%", "10%"], height: ["25%", "10%"] }}
         />
         <Link href="/">
-          <Heading my="auto" fontSize={[3, 4, 5]}>
+          <Heading my="auto" fontSize={[4, 5]}>
             The Cognito Project
           </Heading>
         </Link>
       </Flex>
     </Box>
     <Box width={[1, 1 / 2]} my="auto">
-      <Flex justifyContent="flex-end" verticalAlign="bottom">
+      <Flex
+        justifyContent={["center", "flex-end"]}
+        verticalAlign="bottom"
+        mr={[0, 3]}
+      >
         <NavList links={links} />
       </Flex>
     </Box>

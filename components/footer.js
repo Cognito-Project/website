@@ -11,21 +11,21 @@ const footer = () => (
   <Box>
     <Waves />
     <Box bg="#710b04" mt={-1} p={3}>
-      <Flex alignContent="center" p={1}>
+      <Flex alignContent="center" p={1} flexDirection={["column","row"]}>
         <Box width={[1, 1 / 2]}>
         <Flex alignContent="center" >
           <Image
             src={require("../public/logoNoText.png")}
-            sx={{ width: ["45%", "10%"], height: ["45%", "10%"] }}
+            sx={{ width: ["25%", "10%"], height: ["25%", "10%"] }}
           />
 
-          <Heading my="auto" fontSize={[3, 4, 5]}>
+          <Heading my="auto" fontSize={[4, 5]}>
             The Cognito Project
           </Heading>
           </Flex>
         </Box>
         <Box width={[1, 1 / 2]} my="auto">
-          <Flex justifyContent="flex-end" p={1}>
+          <Flex justifyContent={["center","flex-end"]} p={1}>
             {links.map(link=>(
               <Box px={2}>{link}</Box>
             ))}
