@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Box, Image, Heading, Text, Button, Flex } from "rebass";
-import Typing from "react-typing-animation";
-import styled from "styled-components";
 import Waves from "./waves";
 import RegisterButton from "./registerButton";
 
