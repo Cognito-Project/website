@@ -74,32 +74,14 @@ const Home = ({ children, landing = false, login = false }) => (
                 order: -1
               }}
             >
-              <img
-                style={{
-                  position: "absolute",
-                  width: "20vw",
-                  left: "0",
-                  top: "21vw",
-                  zIndex:"-1"
-                }}
-                src={require("../public/blobLeft.png")}
-              />
+             left
             </Box>
             <Box
               sx={{
                 flexBasis: ["auto", 64]
               }}
             >
-              <img
-                style={{
-                  position: "absolute",
-                  width: "20vw",
-                  right: "0",
-                  top: "9vw",
-                  zIndex:"-1"
-                }}
-                src={require("../public/blobRight.png")}
-              />
+              right
               </Box>*/}
           </Flex>
 
