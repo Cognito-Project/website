@@ -10,13 +10,12 @@ import Footer from "./footer";
 import Header from "./header";
 import Waves from "./waves";
 import ThemeSwitch from "react-theme-switch";
-import netlifyIdentity from "netlify-identity-widget";
 
 const Home = ({ children, landing = false, login = false }) => (
   <React.Fragment>
     <NextSeo
       title="The Cognito Project"
-      description="The Cognito Project is a online platform that teaches students programming & security through project based learning."
+      description="The Cognito Project is a online platform that teaches students security & programming through project based learning."
     />
     <ThemeProvider theme={theme}>
       <Head>
