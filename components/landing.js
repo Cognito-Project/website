@@ -19,7 +19,7 @@ const Nav = () => (
       bg="#710b04"
       verticalAlign="center"
       p={[3,5]}
-      pb={-1}
+      my={-1}
     >
       <Flex
         alignContent="center"
