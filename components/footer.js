@@ -2,10 +2,10 @@ import { Box, Text, Flex, Image, Heading } from "rebass";
 import { FaDiscord, FaTwitter, FaGithub, FaProductHunt } from "react-icons/fa";
 import Waves from "./waves";
 const links = [
-  <FaDiscord size="2em" />,
-  <FaGithub size="2em" />,
-  <FaTwitter size="2em" />,
-  <FaProductHunt size="2em" />
+  { component: <FaDiscord size="2em" />, alt: "Discord" },
+  { component: <FaGithub size="2em" />, alt: "Github" },
+  { component: <FaTwitter size="2em" />, alt: "Twitter" },
+  { component: <FaProductHunt size="2em" />, alt: "Product Hunt" }
 ];
 const footer = () => (
   <Box>
@@ -26,8 +26,10 @@ const footer = () => (
         </Box>
         <Box width={[1, 1 / 2]} my="auto">
           <Flex justifyContent={["center", "flex-end"]} p={1}>
-            {links.map(link => (
-              <Box px={2}>{link}</Box>
+            {links.map(icon=> (
+              <Box key={icon.alt} px={2}>
+                {icon.component}
+              </Box>
             ))}
           </Flex>
         </Box>
