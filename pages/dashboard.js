@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Button, Text, Flex } from "rebass";
+import { Button, Text, Flex, Box } from "rebass";
 import Layout from "../components/layout";
 
 const greetings = ["Hey", "Hi", "Howdy", "Welcome"];
@@ -35,7 +35,11 @@ class Dashboard extends React.Component {
     await this.updateState();
   }
   render() {
-    return <Layout name={this.state.greeting}>This is the dashboard</Layout>;
+    return (
+      <Layout name={this.state.greeting} left={<Box>Courses</Box>}>
+        Course content here
+      </Layout>
+    );
   }
 }
 

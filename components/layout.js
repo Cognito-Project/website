@@ -11,7 +11,13 @@ import Header from "./header";
 import Waves from "./waves";
 import ThemeSwitch from "react-theme-switch";
 
-const Home = ({ children, landing = false, login = false, name = null }) => (
+const Home = ({
+  children,
+  landing = false,
+  login = false,
+  name = null,
+  left = null
+}) => (
   <React.Fragment>
     <NextSeo
       title="The Cognito Project"
@@ -37,7 +43,7 @@ const Home = ({ children, landing = false, login = false, name = null }) => (
               position: "-webkit-sticky",
               position: "sticky",
               top: 0,
-              zIndex:1
+              zIndex: 1
             }}
           >
             <Header />
@@ -73,16 +79,16 @@ const Home = ({ children, landing = false, login = false, name = null }) => (
                 {children}
               </Box>
             </Box>
-            {/*
+
             <Box
               sx={{
                 flexBasis: ["auto", 64],
                 order: -1
               }}
             >
-             left
+              {left}
             </Box>
-            <Box
+            {/*<Box
               sx={{
                 flexBasis: ["auto", 64]
               }}
