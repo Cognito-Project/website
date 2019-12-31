@@ -15,6 +15,7 @@ const footer = () => (
         <Box width={[1, 1 / 2]}>
           <Flex alignContent="center">
             <Image
+              alt="The Cognito Project Logo"
               src={require("../public/logoNoText.png")}
               sx={{ width: ["25%", "10%"], height: ["25%", "10%"] }}
             />
@@ -26,7 +27,7 @@ const footer = () => (
         </Box>
         <Box width={[1, 1 / 2]} my="auto">
           <Flex justifyContent={["center", "flex-end"]} p={1}>
-            {links.map(icon=> (
+            {links.map(icon => (
               <Box key={icon.alt} px={2}>
                 {icon.component}
               </Box>

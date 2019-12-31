@@ -50,6 +50,7 @@ class Header extends React.Component {
         <Box width={[1, 1 / 2]}>
           <Flex alignContent="center">
             <Image
+              alt="The Cognito Project Logo"
               src={require("../public/logoNoText.png")}
               sx={{ width: ["25%", "10%"], height: ["25%", "10%"] }}
             />
