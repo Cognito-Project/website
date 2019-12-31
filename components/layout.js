@@ -11,7 +11,7 @@ import Header from "./header";
 import Waves from "./waves";
 import ThemeSwitch from "react-theme-switch";
 
-const Home = ({ children, landing = false, login = false }) => (
+const Home = ({ children, landing = false, login = false, name = null }) => (
   <React.Fragment>
     <NextSeo
       title="The Cognito Project"
@@ -32,18 +32,24 @@ const Home = ({ children, landing = false, login = false }) => (
         >
           <Box
             bg="#710b04"
-            /*sx={{
+            mb={-1}
+            sx={{
               position: "-webkit-sticky",
               position: "sticky",
               top: 0,
               zIndex:1
-            }}*/
+            }}
           >
             <Header />
           </Box>
 
           {landing ? <Landing /> : null}
-          {login ? <Waves top /> : null}
+          {name != null ? (
+            <Flex px={5} bg="#710b04" justifyContent="flex-end">
+              <Text fontSize={[3, 4, 5]}>{name}</Text>
+            </Flex>
+          ) : null}
+          {login || name != null ? <Waves top /> : null}
           <Flex
             sx={{
               flex: 1,
