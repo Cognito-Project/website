@@ -21,7 +21,7 @@ const Home = ({
   <React.Fragment>
     <NextSeo
       title="The Cognito Project"
-      description="The Cognito Project is a online platform that teaches students security & programming through project based learning."
+      description="The Cognito Project is a online platform that teaches students security & programming through project based learning. Register for the beta today!"
     />
     <ThemeProvider theme={theme}>
       <Head>
