@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: false,
+      isLoggedIn: null,
       name: null,
       greeting: null,
       currentCourse: null,
@@ -32,7 +32,7 @@ class Dashboard extends React.Component {
   async updateState() {
     if (netlifyIdentity.gotrue.currentUser() === null) {
       await this.setState({ isLoggedIn: false });
-      netlifyIdentity.open();
+    
     } else {
       await this.setState({ isLoggedIn: true });
       netlifyIdentity.close();
@@ -59,6 +59,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <Layout name={this.state.greeting} left={null}>
+        {!this.state.isLoggedIn ? <meta http-equiv="Refresh" content="0; url=/login" />: null}
         <Flex flexDirection={["column", "row"]}>
           <Box p={1} mx={3}>
             <Text fontSize={[2, 3, 4]}>
