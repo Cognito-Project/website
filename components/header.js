@@ -64,7 +64,6 @@ class Header extends React.Component {
         <Box width={[1, 1 / 2]} my="auto">
           <Flex
             justifyContent={["center", "flex-end"]}
-            verticalAlign="bottom"
             mr={[0, 3]}
           >
             <NavList links={links} />
