@@ -16,7 +16,8 @@ const Home = ({
   landing = false,
   login = false,
   name = null,
-  left = null
+  left = null,
+  right = null
 }) => (
   <React.Fragment>
     <NextSeo
@@ -88,13 +89,13 @@ const Home = ({
             >
               {left}
             </Box>
-            {/*<Box
+            <Box
               sx={{
                 flexBasis: ["auto", 64]
               }}
             >
-              right
-              </Box>*/}
+              {right}
+            </Box>
           </Flex>
 
           <Footer />
