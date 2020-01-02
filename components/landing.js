@@ -9,15 +9,17 @@ const Nav = () => (
     <Box
       width={1}
       height={[200, 300]}
-      bg="#710b04"
+      bg="#3D0606"
       verticalAlign="center"
       p={[3, 5]}
       my={-1}
     >
       <Flex
+      mx="auto"
         alignContent="center"
         justifyContent="center"
         flexDirection="column"
+        width={[1,400,800]}
       >
         <Heading fontSize={[4, 5, 6]} textAlign="center" color="white">
           Your journey into security and programming starts here.

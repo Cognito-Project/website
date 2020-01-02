@@ -17,7 +17,7 @@ const NavList = props => {
   const links = props.links;
   const linkList = links.map(link => (
     <Link key={link.label} href={link.href}>
-      <Button m={1} bg="transparent" color="#c9c7ff">
+      <Button bg="transparent" color="#C8C8C8" fontWeight="normal">
         {link.label}
       </Button>
     </Link>
@@ -50,36 +50,41 @@ class Header extends React.Component {
         <Box width={[1, 1 / 2]}>
           <Flex alignContent="center">
             <Image
+              my="auto"
               alt="The Cognito Project Logo"
               src={require("../public/logoNoText.png")}
-              sx={{ width: ["25%", "10%"], height: ["25%", "10%"] }}
+              sx={{ width: ["10%", "7%", "5%"], height: ["10%", "7%", "5%"] }}
             />
             <Link href="/">
-              <Heading ml={2} my="auto" fontSize={[4, 5]}>
+              <Heading ml={2} my="auto" fontSize={[3, 4]}>
                 The Cognito Project
               </Heading>
             </Link>
           </Flex>
         </Box>
         <Box width={[1, 1 / 2]} my="auto">
-          <Flex
-            justifyContent={["center", "flex-end"]}
-            mr={[0, 3]}
-          >
+          <Flex justifyContent={["center", "flex-end"]} mr={[0, 3]}>
             <NavList links={links} />
 
             {this.state.isLoggedIn ? (
               <Link href="/login">
-                <Button m={1} bg="transparent" color="#c9c7ff">
+                <Button bg="transparent" color="#C8C8C8" fontWeight="normal">
                   Account
                 </Button>
               </Link>
             ) : (
-              <Link href="/login">
-                <Button m={1} bg="transparent" color="#c9c7ff">
-                  Login
-                </Button>
-              </Link>
+              <Flex>
+                <Link href="/login">
+                  <Button bg="transparent" color="#C8C8C8" fontWeight="normal">
+                    Login
+                  </Button>
+                </Link>{" "}
+                <Link href="/login">
+                  <Button bg="#121212" color="#c9c7ff"   sx={{ boxShadow: "0 0 5px black" }}>
+                    Sign up
+                  </Button>
+                </Link>
+              </Flex>
             )}
           </Flex>
         </Box>

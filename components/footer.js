@@ -10,30 +10,14 @@ const links = [
 const footer = () => (
   <Box>
     <Waves />
-    <Box bg="#710b04" mt={-1} p={3}>
-      <Flex alignContent="center" p={1} flexDirection={["column", "row"]}>
-        <Box width={[1, 1 / 2]}>
-          <Flex alignContent="center">
-            <Image
-              alt="The Cognito Project Logo"
-              src={require("../public/logoNoText.png")}
-              sx={{ width: ["25%", "10%"], height: ["25%", "10%"] }}
-            />
-
-            <Heading ml={2} my="auto" fontSize={[4, 5]}>
-              The Cognito Project
-            </Heading>
-          </Flex>
-        </Box>
-        <Box width={[1, 1 / 2]} my="auto">
-          <Flex justifyContent={["center", "flex-end"]} p={1}>
-            {links.map(icon => (
-              <Box key={icon.alt} px={2}>
-                {icon.component}
-              </Box>
-            ))}
-          </Flex>
-        </Box>
+    <Box bg="#121212" mt={-1} p={3}>
+      <Flex alignContent="center" p={1}>
+        <Flex mx="auto">
+        {links.map(icon => (
+          <Box key={icon.alt} px={2}>
+            {icon.component}
+          </Box>
+        ))}</Flex>
       </Flex>
     </Box>
   </Box>

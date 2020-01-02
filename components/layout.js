@@ -30,7 +30,7 @@ const Home = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box bg="#212121" color="white">
+      <Box bg="black" color="white">
         <Flex
           sx={{
             flexDirection: "column",
@@ -38,21 +38,21 @@ const Home = ({
           }}
         >
           <Box
-            bg="#710b04"
-            mb={-1}
-            sx={{
+            bg="#3D0606"
+            //mb={-1}
+            /*sx={{
               position: "-webkit-sticky",
               position: "sticky",
               top: 0,
               zIndex: 1
-            }}
+            }}*/
           >
             <Header />
           </Box>
 
           {landing ? <Landing /> : null}
           {name != null ? (
-            <Flex px={5} bg="#710b04" justifyContent="flex-end">
+            <Flex px={5} bg="#3D0606" justifyContent="flex-end">
               <Text fontSize={[3, 4, 5]}>{name}</Text>
             </Flex>
           ) : null}
@@ -70,7 +70,6 @@ const Home = ({
               }}
             >
               <Box
-                bg="#212121"
                 color="white"
                 width={[1, 3 / 4]}
                 sx={{

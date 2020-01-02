@@ -29,7 +29,6 @@ class App extends React.Component {
   async componentDidMount() {
     await this.updateState();
     netlifyIdentity.on("close", () => this.updateState());
-    
   }
 
   render() {
@@ -45,18 +44,25 @@ class App extends React.Component {
                   Click here to head to the <u>learning dashboard</u>
                 </Text>
               </Link>
-              <Button bg="#c9c7ff" color="black" onClick={() => this.logOut()}>
+              <Button bg="#AF0404" onClick={() => this.logOut()}>
                 <Text fontSize={[2, 3, 4]}>Log out</Text>
               </Button>
             </Box>
           ) : (
-            <Button
-              bg="#c9c7ff"
-              color="black"
-              onClick={() => netlifyIdentity.open()}
-            >
-              <Text fontSize={[3, 4, 5]}> Click here to login!</Text>
-            </Button>
+            <Flex flexDirection="column" m={2} p={2}>
+              <Button
+                m={3}
+                bg="#AF0404"
+                onClick={() => netlifyIdentity.open("signup")}
+              >
+                <Text fontSize={[3, 4, 5]}>
+                  Click here to register for the beta!
+                </Text>
+              </Button>
+              <Button m={3} bg="#AF0404" onClick={() => netlifyIdentity.open()}>
+                <Text fontSize={[3, 4, 5]}> Click here to login!</Text>
+              </Button>
+            </Flex>
           )}
         </Flex>
       </Layout>

@@ -29,14 +29,14 @@ const courses = ["Intro to Cybersecurity", "Java", "Python", "Golang"];
 const Home = () => (
   <Layout landing>
     <ScrollableAnchor id={"about"}>
-      <Text fontSize={[3, 4, 5]} textAlign="center" my={5}>
+      <Heading fontSize={[3, 4, 5]} textAlign="center" my={5}>
         The Cognito Project is a online platform that teaches students security
         & programming through project based learning.
-      </Text>
+      </Heading>
     </ScrollableAnchor>
     <Flex justifyContent="center" flexWrap="wrap">
       {info.map(i => (
-        <ContentCard title={i.Title}>{i.Body}</ContentCard>
+        <ContentCard title={i.Title} desc={i.Body}/>
       ))}
     </Flex>
     <ScrollableAnchor id={"courses"}>
@@ -48,8 +48,8 @@ const Home = () => (
       {courses.map(course => (
         <Card
           sx={{ borderRadius: 12 }}
-          bg="grey"
-          color="snow"
+          bg="#121212"
+          color="white"
           m={3}
           padding={10}
         >
